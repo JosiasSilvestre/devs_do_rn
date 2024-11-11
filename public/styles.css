@@ -1,0 +1,175 @@
+/* Estilos Gerais */
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: #f4f4f4;
+}
+
+/* Estrutura do Dashboard */
+.dashboard-container {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    background-color: #f9f9f9;
+}
+
+/* Barra de Navegação Lateral */
+.sidebar {
+    width: 250px;
+    background-color: #1e2a3a;
+    color: #fff;
+    padding: 20px;
+    position: fixed;
+    height: 100vh;
+    top: 0;
+    left: 0;
+}
+
+.sidebar h2 {
+    font-size: 1.8rem;
+    color: #ecf0f1;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+.sidebar ul li a {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+    background-color: #3498db;
+    color: #fff;
+}
+
+.sidebar ul li a i {
+    margin-right: 10px;
+    font-size: 1.4rem;
+    color: #fff; /* Ajustando cor do ícone */
+}
+
+/* Área de Conteúdo Principal */
+.main-content {
+    margin-left: 270px; /* Aumentando o espaço entre o menu e o conteúdo */
+    width: calc(100% - 270px); /* Ajustando a largura do conteúdo */
+    padding: 20px;
+    background-color: #ecf0f1;
+}
+
+.main-content header h1 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+}
+
+.main-content header p {
+    color: #7f8c8d;
+    margin-bottom: 20px;
+}
+
+/* Cards de Informações */
+.info-cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.card {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    max-width: 320px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card i {
+    font-size: 3rem;
+    color: #3498db; /* Cor dos ícones ajustada */
+    margin-right: 15px;
+}
+
+.card h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #2c3e50;
+}
+
+.card p {
+    color: #7f8c8d;
+    font-size: 0.9rem;
+}
+
+/* Estilo para as páginas de cadastro (associado, anuidade, etc.) */
+.form-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.form-container input,
+.form-container select,
+.form-container button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.form-container input:focus,
+.form-container select:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+.form-container button {
+    background-color: #3498db;
+    color: #fff;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+}
+
+.form-container button:hover {
+    background-color: #2980b9;
+}

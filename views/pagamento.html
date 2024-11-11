@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagamento de Anuidade</title>
+    <link rel="stylesheet" href="../public/styles.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Barra de Navegação Lateral -->
+        <nav class="sidebar">
+            <h2>Devs do RN</h2>
+            <ul>
+                <li><a href="cadastro_associado.html"><i class="fas fa-user-plus"></i> Cadastrar Associado</a></li>
+                <li><a href="cadastro_anuidade.html"><i class="fas fa-calendar-alt"></i> Cadastrar Anuidade</a></li>
+                <li><a href="../src/cobranca.php?associado_id=[ID_ASSOCIADO]"><i class="fas fa-file-invoice-dollar"></i> Consultar Anuidades</a></li>
+                <li><a href="pagamento.html"><i class="fas fa-credit-card"></i> Pagamento de Anuidade</a></li>
+                <li><a href="../src/status_associados.php"><i class="fas fa-check-circle"></i> Status dos Associados</a></li>
+            </ul>
+        </nav>
+
+        <!-- Área de Conteúdo Principal -->
+        <main class="main-content">
+            <header>
+                <h1>Pagamento de Anuidade</h1>
+                <p>Realize o pagamento de uma anuidade do associado.</p>
+            </header>
+
+            <section class="form-container">
+                <form action="pagamento_process.php" method="POST">
+                    <label for="associado_id">ID do Associado</label>
+                    <input type="number" id="associado_id" name="associado_id" required placeholder="Digite o ID do associado">
+
+                    <label for="anuidade_id">ID da Anuidade</label>
+                    <input type="number" id="anuidade_id" name="anuidade_id" required placeholder="Digite o ID da anuidade">
+
+                    <label for="status">Status de Pagamento</label>
+                    <select id="status" name="status" required>
+                        <option value="pago">Pago</option>
+                        <option value="pendente">Pendente</option>
+                    </select>
+
+                    <button type="submit">Efetuar Pagamento</button>
+                </form>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
